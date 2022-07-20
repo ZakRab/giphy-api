@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Router>
-        <Menu className="menu" />
+        <Menu className="navbar navbar navbar-expand-lg bg-light" />
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/registerPage" element={<RegisterPage />} />

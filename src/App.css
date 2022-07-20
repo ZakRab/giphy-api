@@ -2,3 +2,10 @@
   width: 100%;
   background-color: blue;
 }
+.flex{
+  display: flex;
+}
+.activeLink{
+  color: red
+}
+

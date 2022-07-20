@@ -3,13 +3,22 @@ import { NavLink } from "react-router-dom";
 
 const Menu = () => {
   return (
-    <>
-      <div>Menu</div>
+    <div className="navbar navbar-expand-lg bg-light">
+    <div className="container-fluid">
+      <div>MENU</div>
 
       <div>
         <NavLink
+          to="/searchPage"
+          className={({ isActive }) => (isActive ? "activeLink" : undefined)}
+        >
+          Search Gifs
+        </NavLink>
+      </div>
+      <div>
+        <NavLink
           to="/gifDisplay "
-          className={({ isActive }) => (isActive ? activeClassName : undefined)}
+          className={({ isActive }) => (isActive ? "activeLink" : undefined)}
           end
         >
           Home
@@ -18,15 +27,15 @@ const Menu = () => {
       <div>
         <NavLink
           to="/login"
-          className={({ isActive }) => (isActive ? activeClassName : undefined)}
+          className={({ isActive }) => (isActive ? "activeLink" : undefined)}
         >
           Login
         </NavLink>
       </div>
       <div>
         <NavLink
-          to="/register"
-          className={({ isActive }) => (isActive ? activeClassName : undefined)}
+          to="/registerPage"
+          className={({ isActive }) => (isActive ? "activeLink" : undefined)}
         >
           Register
         </NavLink>
@@ -34,20 +43,13 @@ const Menu = () => {
       <div>
         <NavLink
           to="/favorites"
-          className={({ isActive }) => (isActive ? activeClassName : undefined)}
+          className={({ isActive }) => (isActive ? "activeLink" : undefined)}
         >
           Favorites
         </NavLink>
       </div>
-      <div>
-        <NavLink
-          to="/searchPage"
-          className={({ isActive }) => (isActive ? activeClassName : undefined)}
-        >
-          Search Gifs
-        </NavLink>
       </div>
-    </>
+    </div>
   );
 };
 
